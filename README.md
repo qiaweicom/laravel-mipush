@@ -27,7 +27,7 @@
 
 # 实例
 
-### 安卓根据topic发送
+### 安卓根据全局发送
 
     $secret = config('mipush.android.app_secret');
     $package = config('mipush.android.bundle_id');
@@ -46,7 +46,7 @@
         
     $sender = new Sender();
   
-    $res = $sender->broadcast($message, $topic)->getRaw();
+    $res = $sender->broadcastAll($message)->getRaw();
     return $res;
 
     
