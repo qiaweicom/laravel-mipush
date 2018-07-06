@@ -1,0 +1,22 @@
+{
+    "name": "qiaweicom/laravel-mipush",
+    "description": "php laravel mi-push",
+    "license": "MIT",
+    "keywords": ["laravel mi-push"],
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "qiaweicom",
+            "email": "support@qiawei.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "qiaweicom\\MiPush\\": "src/"
+        }
+    }
+}
