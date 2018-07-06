@@ -1,26 +1,31 @@
 # laravel-mi-push基于laravel5.5的小米推送
 
 # 安装方法
-### 1、在项目目录下 
-    composer require qiaweicom/laravel-mi-push    
+### 1、安装
+    composer require qiaweicom/laravel-mipush    
     composer install
     
     或
     
-    composer.json 中添加 "qiaweicom/laravel-mi-push": "^1.0"  
+    composer.json 中添加 "qiaweicom/laravel-mipush": "^1.0"  
     composer update 
 
  如果无法安装 请执行一下 composer update nothing 然后 composer update
  
  
-###  2、在config/app.php
-   'providers' 中添加 \qiaweicom\MiPush\MiPushServiceProvider::class,
-   
-   
-###  3、执行 php artisan config:cache 清空配置缓存 
-执行 php artisan vendor:publish
+###  2、配置app.php
 
-###  4、配置 config/mipush.php
+    在config/app.php 'providers' 中添加 \qiaweicom\MiPush\MiPushServiceProvider::class,
+   
+   
+###  3、执行命令
+    php artisan config:cache 清空配置缓存 
+    php artisan vendor:publish 
+
+###  5、配置文件
+    config/mipush.php
+
+# 实例
 
 ### 安卓根据topic发送
 
@@ -45,7 +50,7 @@
     return $res;
 
     
-### 苹果根据topic发送
+### 苹果全局发送
 
     $secret = config('mipush.ios.app_secret');
     $package = config('mipush.ios.bundle_id');
